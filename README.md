@@ -29,3 +29,17 @@ An end-to-end Data Analysis project completed as part of the **Auspify Technolog
 ├── data_analysis_report.pdf                  # Comprehensive 4-page formal project report
 ├── PDF_Report_Screenshot_Preview.png         # Executive dashboard preview image
 └── README.md                                 # Project documentation
+
+from PIL import Image, ImageDraw, ImageFont
+
+# Canvas Create karein
+img = Image.new('RGB', (800, 400), color='#0d1117')
+draw = ImageDraw.Draw(img)
+
+# Main Title & Content
+text = "Project Report Preview\n\n- Data Analysis Completed\n- Graph Theory Visualizations\n- Status: Ready to Deploy"
+draw.text((40, 40), text, fill='#c9d1d9')
+
+# Save Image
+img.save('Report_Screenshot_Preview.png')
+print("Image saved successfully as Report_Screenshot_Preview.png")
